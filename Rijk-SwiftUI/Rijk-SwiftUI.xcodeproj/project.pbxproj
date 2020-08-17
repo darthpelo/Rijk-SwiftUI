@@ -1,0 +1,652 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4C06DB9324EB1907008F534D /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C06DB9224EB1907008F534D /* Preferences.plist */; };
+		4C06DB9524EB1960008F534D /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06DB9424EB1960008F534D /* Preferences.swift */; };
+		4CDD843A24EADA6600B867B6 /* Rijk_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD843924EADA6600B867B6 /* Rijk_SwiftUIApp.swift */; };
+		4CDD843C24EADA6600B867B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD843B24EADA6600B867B6 /* ContentView.swift */; };
+		4CDD843E24EADA6900B867B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD843D24EADA6900B867B6 /* Assets.xcassets */; };
+		4CDD844124EADA6900B867B6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD844024EADA6900B867B6 /* Preview Assets.xcassets */; };
+		4CDD844C24EADA6900B867B6 /* Rijk_SwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD844B24EADA6900B867B6 /* Rijk_SwiftUITests.swift */; };
+		4CDD845724EADA6900B867B6 /* Rijk_SwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD845624EADA6900B867B6 /* Rijk_SwiftUIUITests.swift */; };
+		4CDD846524EADC8100B867B6 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD846424EADC8100B867B6 /* CollectionViewModel.swift */; };
+		4CDD846724EADC9600B867B6 /* CollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD846624EADC9600B867B6 /* CollectionView.swift */; };
+		4CDD846B24EAE05100B867B6 /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD846A24EAE05100B867B6 /* Collection.swift */; };
+		4CDD846E24EAE3DF00B867B6 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4CDD846D24EAE3DF00B867B6 /* Moya */; };
+		4CDD847024EAE41000B867B6 /* RijkStudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD846F24EAE41000B867B6 /* RijkStudioService.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CDD844824EADA6900B867B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CDD842E24EADA6600B867B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CDD843524EADA6600B867B6;
+			remoteInfo = "Rijk-SwiftUI";
+		};
+		4CDD845324EADA6900B867B6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CDD842E24EADA6600B867B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CDD843524EADA6600B867B6;
+			remoteInfo = "Rijk-SwiftUI";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4C06DB9224EB1907008F534D /* Preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Preferences.plist; sourceTree = "<group>"; };
+		4C06DB9424EB1960008F534D /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		4CDD843624EADA6600B867B6 /* Rijk-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rijk-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDD843924EADA6600B867B6 /* Rijk_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rijk_SwiftUIApp.swift; sourceTree = "<group>"; };
+		4CDD843B24EADA6600B867B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4CDD843D24EADA6900B867B6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CDD844024EADA6900B867B6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4CDD844224EADA6900B867B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CDD844724EADA6900B867B6 /* Rijk-SwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rijk-SwiftUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDD844B24EADA6900B867B6 /* Rijk_SwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rijk_SwiftUITests.swift; sourceTree = "<group>"; };
+		4CDD844D24EADA6900B867B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CDD845224EADA6900B867B6 /* Rijk-SwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rijk-SwiftUIUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CDD845624EADA6900B867B6 /* Rijk_SwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rijk_SwiftUIUITests.swift; sourceTree = "<group>"; };
+		4CDD845824EADA6900B867B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4CDD846424EADC8100B867B6 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
+		4CDD846624EADC9600B867B6 /* CollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionView.swift; sourceTree = "<group>"; };
+		4CDD846A24EAE05100B867B6 /* Collection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Collection.swift; sourceTree = "<group>"; };
+		4CDD846F24EAE41000B867B6 /* RijkStudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijkStudioService.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CDD843324EADA6600B867B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDD846E24EAE3DF00B867B6 /* Moya in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDD844424EADA6900B867B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDD844F24EADA6900B867B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CDD842D24EADA6600B867B6 = {
+			isa = PBXGroup;
+			children = (
+				4CDD843824EADA6600B867B6 /* Rijk-SwiftUI */,
+				4CDD844A24EADA6900B867B6 /* Rijk-SwiftUITests */,
+				4CDD845524EADA6900B867B6 /* Rijk-SwiftUIUITests */,
+				4CDD843724EADA6600B867B6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CDD843724EADA6600B867B6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CDD843624EADA6600B867B6 /* Rijk-SwiftUI.app */,
+				4CDD844724EADA6900B867B6 /* Rijk-SwiftUITests.xctest */,
+				4CDD845224EADA6900B867B6 /* Rijk-SwiftUIUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CDD843824EADA6600B867B6 /* Rijk-SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				4CDD844224EADA6900B867B6 /* Info.plist */,
+				4C06DB9224EB1907008F534D /* Preferences.plist */,
+				4CDD843B24EADA6600B867B6 /* ContentView.swift */,
+				4CDD843924EADA6600B867B6 /* Rijk_SwiftUIApp.swift */,
+				4CDD846F24EAE41000B867B6 /* RijkStudioService.swift */,
+				4CDD843D24EADA6900B867B6 /* Assets.xcassets */,
+				4CDD846924EAE04200B867B6 /* Model */,
+				4CDD843F24EADA6900B867B6 /* Preview Content */,
+				4CDD846824EAE02C00B867B6 /* Scenes */,
+				4C06DB9424EB1960008F534D /* Preferences.swift */,
+			);
+			path = "Rijk-SwiftUI";
+			sourceTree = "<group>";
+		};
+		4CDD843F24EADA6900B867B6 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4CDD844024EADA6900B867B6 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4CDD844A24EADA6900B867B6 /* Rijk-SwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4CDD844B24EADA6900B867B6 /* Rijk_SwiftUITests.swift */,
+				4CDD844D24EADA6900B867B6 /* Info.plist */,
+			);
+			path = "Rijk-SwiftUITests";
+			sourceTree = "<group>";
+		};
+		4CDD845524EADA6900B867B6 /* Rijk-SwiftUIUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4CDD845624EADA6900B867B6 /* Rijk_SwiftUIUITests.swift */,
+				4CDD845824EADA6900B867B6 /* Info.plist */,
+			);
+			path = "Rijk-SwiftUIUITests";
+			sourceTree = "<group>";
+		};
+		4CDD846824EAE02C00B867B6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				4CDD846424EADC8100B867B6 /* CollectionViewModel.swift */,
+				4CDD846624EADC9600B867B6 /* CollectionView.swift */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		4CDD846924EAE04200B867B6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4CDD846A24EAE05100B867B6 /* Collection.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CDD843524EADA6600B867B6 /* Rijk-SwiftUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CDD845B24EADA6900B867B6 /* Build configuration list for PBXNativeTarget "Rijk-SwiftUI" */;
+			buildPhases = (
+				4CDD843224EADA6600B867B6 /* Sources */,
+				4CDD843324EADA6600B867B6 /* Frameworks */,
+				4CDD843424EADA6600B867B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Rijk-SwiftUI";
+			packageProductDependencies = (
+				4CDD846D24EAE3DF00B867B6 /* Moya */,
+			);
+			productName = "Rijk-SwiftUI";
+			productReference = 4CDD843624EADA6600B867B6 /* Rijk-SwiftUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CDD844624EADA6900B867B6 /* Rijk-SwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CDD845E24EADA6900B867B6 /* Build configuration list for PBXNativeTarget "Rijk-SwiftUITests" */;
+			buildPhases = (
+				4CDD844324EADA6900B867B6 /* Sources */,
+				4CDD844424EADA6900B867B6 /* Frameworks */,
+				4CDD844524EADA6900B867B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CDD844924EADA6900B867B6 /* PBXTargetDependency */,
+			);
+			name = "Rijk-SwiftUITests";
+			productName = "Rijk-SwiftUITests";
+			productReference = 4CDD844724EADA6900B867B6 /* Rijk-SwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4CDD845124EADA6900B867B6 /* Rijk-SwiftUIUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CDD846124EADA6900B867B6 /* Build configuration list for PBXNativeTarget "Rijk-SwiftUIUITests" */;
+			buildPhases = (
+				4CDD844E24EADA6900B867B6 /* Sources */,
+				4CDD844F24EADA6900B867B6 /* Frameworks */,
+				4CDD845024EADA6900B867B6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CDD845424EADA6900B867B6 /* PBXTargetDependency */,
+			);
+			name = "Rijk-SwiftUIUITests";
+			productName = "Rijk-SwiftUIUITests";
+			productReference = 4CDD845224EADA6900B867B6 /* Rijk-SwiftUIUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CDD842E24EADA6600B867B6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1200;
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					4CDD843524EADA6600B867B6 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					4CDD844624EADA6900B867B6 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 4CDD843524EADA6600B867B6;
+					};
+					4CDD845124EADA6900B867B6 = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 4CDD843524EADA6600B867B6;
+					};
+				};
+			};
+			buildConfigurationList = 4CDD843124EADA6600B867B6 /* Build configuration list for PBXProject "Rijk-SwiftUI" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CDD842D24EADA6600B867B6;
+			packageReferences = (
+				4CDD846C24EAE3DF00B867B6 /* XCRemoteSwiftPackageReference "Moya" */,
+			);
+			productRefGroup = 4CDD843724EADA6600B867B6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CDD843524EADA6600B867B6 /* Rijk-SwiftUI */,
+				4CDD844624EADA6900B867B6 /* Rijk-SwiftUITests */,
+				4CDD845124EADA6900B867B6 /* Rijk-SwiftUIUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CDD843424EADA6600B867B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDD844124EADA6900B867B6 /* Preview Assets.xcassets in Resources */,
+				4CDD843E24EADA6900B867B6 /* Assets.xcassets in Resources */,
+				4C06DB9324EB1907008F534D /* Preferences.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDD844524EADA6900B867B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDD845024EADA6900B867B6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CDD843224EADA6600B867B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C06DB9524EB1960008F534D /* Preferences.swift in Sources */,
+				4CDD846524EADC8100B867B6 /* CollectionViewModel.swift in Sources */,
+				4CDD846B24EAE05100B867B6 /* Collection.swift in Sources */,
+				4CDD843C24EADA6600B867B6 /* ContentView.swift in Sources */,
+				4CDD847024EAE41000B867B6 /* RijkStudioService.swift in Sources */,
+				4CDD846724EADC9600B867B6 /* CollectionView.swift in Sources */,
+				4CDD843A24EADA6600B867B6 /* Rijk_SwiftUIApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDD844324EADA6900B867B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDD844C24EADA6900B867B6 /* Rijk_SwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDD844E24EADA6900B867B6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CDD845724EADA6900B867B6 /* Rijk_SwiftUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CDD844924EADA6900B867B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CDD843524EADA6600B867B6 /* Rijk-SwiftUI */;
+			targetProxy = 4CDD844824EADA6900B867B6 /* PBXContainerItemProxy */;
+		};
+		4CDD845424EADA6900B867B6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CDD843524EADA6600B867B6 /* Rijk-SwiftUI */;
+			targetProxy = 4CDD845324EADA6900B867B6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4CDD845924EADA6900B867B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4CDD845A24EADA6900B867B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CDD845C24EADA6900B867B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Rijk-SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = GK5S624D99;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Rijk-SwiftUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alessioroberto.Rijk-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CDD845D24EADA6900B867B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Rijk-SwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = GK5S624D99;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Rijk-SwiftUI/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alessioroberto.Rijk-SwiftUI";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4CDD845F24EADA6900B867B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GK5S624D99;
+				INFOPLIST_FILE = "Rijk-SwiftUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alessioroberto.Rijk-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rijk-SwiftUI.app/Rijk-SwiftUI";
+			};
+			name = Debug;
+		};
+		4CDD846024EADA6900B867B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GK5S624D99;
+				INFOPLIST_FILE = "Rijk-SwiftUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alessioroberto.Rijk-SwiftUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rijk-SwiftUI.app/Rijk-SwiftUI";
+			};
+			name = Release;
+		};
+		4CDD846224EADA6900B867B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GK5S624D99;
+				INFOPLIST_FILE = "Rijk-SwiftUIUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alessioroberto.Rijk-SwiftUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Rijk-SwiftUI";
+			};
+			name = Debug;
+		};
+		4CDD846324EADA6900B867B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GK5S624D99;
+				INFOPLIST_FILE = "Rijk-SwiftUIUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alessioroberto.Rijk-SwiftUIUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Rijk-SwiftUI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CDD843124EADA6600B867B6 /* Build configuration list for PBXProject "Rijk-SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CDD845924EADA6900B867B6 /* Debug */,
+				4CDD845A24EADA6900B867B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CDD845B24EADA6900B867B6 /* Build configuration list for PBXNativeTarget "Rijk-SwiftUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CDD845C24EADA6900B867B6 /* Debug */,
+				4CDD845D24EADA6900B867B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CDD845E24EADA6900B867B6 /* Build configuration list for PBXNativeTarget "Rijk-SwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CDD845F24EADA6900B867B6 /* Debug */,
+				4CDD846024EADA6900B867B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CDD846124EADA6900B867B6 /* Build configuration list for PBXNativeTarget "Rijk-SwiftUIUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CDD846224EADA6900B867B6 /* Debug */,
+				4CDD846324EADA6900B867B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4CDD846C24EAE3DF00B867B6 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4CDD846D24EAE3DF00B867B6 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CDD846C24EAE3DF00B867B6 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 4CDD842E24EADA6600B867B6 /* Project object */;
+}
