@@ -88,3 +88,6 @@ fastlane/test_output
 # https://github.com/johnno1962/injectionforxcode
 
 iOSInjectionProject/
+/Rijk-SwiftUI/Rijk-SwiftUI/Preferences.plist
+/Rijk-SwiftUI/Rijk-SwiftUI.xcodeproj/project.xcworkspace/xcshareddata/swiftpm
+/Rijk-SwiftUI/Rijk-SwiftUI.xcodeproj/project.xcworkspace/contents.xcworkspacedata
