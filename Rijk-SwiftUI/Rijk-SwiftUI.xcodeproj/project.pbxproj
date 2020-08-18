@@ -9,6 +9,17 @@
 /* Begin PBXBuildFile section */
 		4C06DB9324EB1907008F534D /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C06DB9224EB1907008F534D /* Preferences.plist */; };
 		4C06DB9524EB1960008F534D /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06DB9424EB1960008F534D /* Preferences.swift */; };
+		4C06DB9D24EB1FF1008F534D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C06DB9C24EB1FF1008F534D /* WidgetKit.framework */; };
+		4C06DB9F24EB1FF1008F534D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4C06DB9E24EB1FF1008F534D /* SwiftUI.framework */; };
+		4C06DBA224EB1FF1008F534D /* RijkWidget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06DBA124EB1FF1008F534D /* RijkWidget.swift */; };
+		4C06DBA424EB1FF3008F534D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C06DBA324EB1FF3008F534D /* Assets.xcassets */; };
+		4C06DBA824EB1FF3008F534D /* RijkWidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4C06DB9A24EB1FF0008F534D /* RijkWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4C06DBAD24EB2155008F534D /* RijkStudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD846F24EAE41000B867B6 /* RijkStudioService.swift */; };
+		4C06DBAE24EB2165008F534D /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06DB9424EB1960008F534D /* Preferences.swift */; };
+		4C06DBB024EB2205008F534D /* ModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06DBAF24EB2204008F534D /* ModelConverter.swift */; };
+		4C06DBB124EB2205008F534D /* ModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06DBAF24EB2204008F534D /* ModelConverter.swift */; };
+		4C06DBB224EB2280008F534D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD846A24EAE05100B867B6 /* Collection.swift */; };
+		4C06DBB424EB230D008F534D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4C06DBB324EB230D008F534D /* Moya */; };
 		4CDD843A24EADA6600B867B6 /* Rijk_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD843924EADA6600B867B6 /* Rijk_SwiftUIApp.swift */; };
 		4CDD843C24EADA6600B867B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD843B24EADA6600B867B6 /* ContentView.swift */; };
 		4CDD843E24EADA6900B867B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD843D24EADA6900B867B6 /* Assets.xcassets */; };
@@ -23,6 +34,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4C06DBA624EB1FF3008F534D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CDD842E24EADA6600B867B6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C06DB9924EB1FF0008F534D;
+			remoteInfo = RijkWidgetExtension;
+		};
 		4CDD844824EADA6900B867B6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4CDD842E24EADA6600B867B6 /* Project object */;
@@ -39,9 +57,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		4C06DBAC24EB1FF3008F534D /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4C06DBA824EB1FF3008F534D /* RijkWidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		4C06DB9224EB1907008F534D /* Preferences.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Preferences.plist; sourceTree = "<group>"; };
 		4C06DB9424EB1960008F534D /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		4C06DB9A24EB1FF0008F534D /* RijkWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = RijkWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C06DB9C24EB1FF1008F534D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		4C06DB9E24EB1FF1008F534D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		4C06DBA124EB1FF1008F534D /* RijkWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RijkWidget.swift; sourceTree = "<group>"; };
+		4C06DBA324EB1FF3008F534D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4C06DBA524EB1FF3008F534D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4C06DBAF24EB2204008F534D /* ModelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConverter.swift; sourceTree = "<group>"; };
 		4CDD843624EADA6600B867B6 /* Rijk-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rijk-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDD843924EADA6600B867B6 /* Rijk_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rijk_SwiftUIApp.swift; sourceTree = "<group>"; };
 		4CDD843B24EADA6600B867B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +100,16 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4C06DB9724EB1FF0008F534D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C06DB9F24EB1FF1008F534D /* SwiftUI.framework in Frameworks */,
+				4C06DB9D24EB1FF1008F534D /* WidgetKit.framework in Frameworks */,
+				4C06DBB424EB230D008F534D /* Moya in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CDD843324EADA6600B867B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -86,12 +135,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C06DB9B24EB1FF0008F534D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C06DB9C24EB1FF1008F534D /* WidgetKit.framework */,
+				4C06DB9E24EB1FF1008F534D /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C06DBA024EB1FF1008F534D /* RijkWidget */ = {
+			isa = PBXGroup;
+			children = (
+				4C06DBA124EB1FF1008F534D /* RijkWidget.swift */,
+				4C06DBA324EB1FF3008F534D /* Assets.xcassets */,
+				4C06DBA524EB1FF3008F534D /* Info.plist */,
+			);
+			path = RijkWidget;
+			sourceTree = "<group>";
+		};
 		4CDD842D24EADA6600B867B6 = {
 			isa = PBXGroup;
 			children = (
 				4CDD843824EADA6600B867B6 /* Rijk-SwiftUI */,
 				4CDD844A24EADA6900B867B6 /* Rijk-SwiftUITests */,
 				4CDD845524EADA6900B867B6 /* Rijk-SwiftUIUITests */,
+				4C06DBA024EB1FF1008F534D /* RijkWidget */,
+				4C06DB9B24EB1FF0008F534D /* Frameworks */,
 				4CDD843724EADA6600B867B6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -102,6 +172,7 @@
 				4CDD843624EADA6600B867B6 /* Rijk-SwiftUI.app */,
 				4CDD844724EADA6900B867B6 /* Rijk-SwiftUITests.xctest */,
 				4CDD845224EADA6900B867B6 /* Rijk-SwiftUIUITests.xctest */,
+				4C06DB9A24EB1FF0008F534D /* RijkWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -112,13 +183,13 @@
 				4CDD844224EADA6900B867B6 /* Info.plist */,
 				4C06DB9224EB1907008F534D /* Preferences.plist */,
 				4CDD843B24EADA6600B867B6 /* ContentView.swift */,
+				4C06DB9424EB1960008F534D /* Preferences.swift */,
 				4CDD843924EADA6600B867B6 /* Rijk_SwiftUIApp.swift */,
 				4CDD846F24EAE41000B867B6 /* RijkStudioService.swift */,
 				4CDD843D24EADA6900B867B6 /* Assets.xcassets */,
 				4CDD846924EAE04200B867B6 /* Model */,
 				4CDD843F24EADA6900B867B6 /* Preview Content */,
 				4CDD846824EAE02C00B867B6 /* Scenes */,
-				4C06DB9424EB1960008F534D /* Preferences.swift */,
 			);
 			path = "Rijk-SwiftUI";
 			sourceTree = "<group>";
@@ -162,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				4CDD846A24EAE05100B867B6 /* Collection.swift */,
+				4C06DBAF24EB2204008F534D /* ModelConverter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -169,6 +241,26 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4C06DB9924EB1FF0008F534D /* RijkWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4C06DBA924EB1FF3008F534D /* Build configuration list for PBXNativeTarget "RijkWidgetExtension" */;
+			buildPhases = (
+				4C06DB9624EB1FF0008F534D /* Sources */,
+				4C06DB9724EB1FF0008F534D /* Frameworks */,
+				4C06DB9824EB1FF0008F534D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RijkWidgetExtension;
+			packageProductDependencies = (
+				4C06DBB324EB230D008F534D /* Moya */,
+			);
+			productName = RijkWidgetExtension;
+			productReference = 4C06DB9A24EB1FF0008F534D /* RijkWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		4CDD843524EADA6600B867B6 /* Rijk-SwiftUI */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4CDD845B24EADA6900B867B6 /* Build configuration list for PBXNativeTarget "Rijk-SwiftUI" */;
@@ -176,10 +268,12 @@
 				4CDD843224EADA6600B867B6 /* Sources */,
 				4CDD843324EADA6600B867B6 /* Frameworks */,
 				4CDD843424EADA6600B867B6 /* Resources */,
+				4C06DBAC24EB1FF3008F534D /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				4C06DBA724EB1FF3008F534D /* PBXTargetDependency */,
 			);
 			name = "Rijk-SwiftUI";
 			packageProductDependencies = (
@@ -234,6 +328,9 @@
 				LastSwiftUpdateCheck = 1200;
 				LastUpgradeCheck = 1200;
 				TargetAttributes = {
+					4C06DB9924EB1FF0008F534D = {
+						CreatedOnToolsVersion = 12.0;
+					};
 					4CDD843524EADA6600B867B6 = {
 						CreatedOnToolsVersion = 12.0;
 					};
@@ -266,11 +363,20 @@
 				4CDD843524EADA6600B867B6 /* Rijk-SwiftUI */,
 				4CDD844624EADA6900B867B6 /* Rijk-SwiftUITests */,
 				4CDD845124EADA6900B867B6 /* Rijk-SwiftUIUITests */,
+				4C06DB9924EB1FF0008F534D /* RijkWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4C06DB9824EB1FF0008F534D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C06DBA424EB1FF3008F534D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CDD843424EADA6600B867B6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -298,10 +404,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4C06DB9624EB1FF0008F534D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4C06DBB124EB2205008F534D /* ModelConverter.swift in Sources */,
+				4C06DBB224EB2280008F534D /* Collection.swift in Sources */,
+				4C06DBA224EB1FF1008F534D /* RijkWidget.swift in Sources */,
+				4C06DBAD24EB2155008F534D /* RijkStudioService.swift in Sources */,
+				4C06DBAE24EB2165008F534D /* Preferences.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4CDD843224EADA6600B867B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C06DBB024EB2205008F534D /* ModelConverter.swift in Sources */,
 				4C06DB9524EB1960008F534D /* Preferences.swift in Sources */,
 				4CDD846524EADC8100B867B6 /* CollectionViewModel.swift in Sources */,
 				4CDD846B24EAE05100B867B6 /* Collection.swift in Sources */,
@@ -331,6 +450,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4C06DBA724EB1FF3008F534D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4C06DB9924EB1FF0008F534D /* RijkWidgetExtension */;
+			targetProxy = 4C06DBA624EB1FF3008F534D /* PBXContainerItemProxy */;
+		};
 		4CDD844924EADA6900B867B6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 4CDD843524EADA6600B867B6 /* Rijk-SwiftUI */;
@@ -344,6 +468,48 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		4C06DBAA24EB1FF3008F534D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GK5S624D99;
+				INFOPLIST_FILE = RijkWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alessioroberto.Rijk-SwiftUI.RijkWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4C06DBAB24EB1FF3008F534D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GK5S624D99;
+				INFOPLIST_FILE = RijkWidget/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.alessioroberto.Rijk-SwiftUI.RijkWidget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		4CDD845924EADA6900B867B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -463,6 +629,7 @@
 		4CDD845C24EADA6900B867B6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -485,6 +652,7 @@
 		4CDD845D24EADA6900B867B6 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -591,6 +759,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4C06DBA924EB1FF3008F534D /* Build configuration list for PBXNativeTarget "RijkWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4C06DBAA24EB1FF3008F534D /* Debug */,
+				4C06DBAB24EB1FF3008F534D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4CDD843124EADA6600B867B6 /* Build configuration list for PBXProject "Rijk-SwiftUI" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -641,6 +818,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4C06DBB324EB230D008F534D /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4CDD846C24EAE3DF00B867B6 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
 		4CDD846D24EAE3DF00B867B6 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 4CDD846C24EAE3DF00B867B6 /* XCRemoteSwiftPackageReference "Moya" */;

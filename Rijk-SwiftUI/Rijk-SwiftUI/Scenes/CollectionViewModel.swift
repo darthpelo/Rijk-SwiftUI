@@ -8,6 +8,7 @@
 import Combine
 import Foundation
 import Moya
+import WidgetKit
 
 protocol CollectionViewModelInterface {
     func data()
@@ -24,56 +25,20 @@ final class CollectionViewModel: ObservableObject, CollectionViewModelInterface 
     }
 
     func data() {
+        WidgetCenter.shared.reloadAllTimelines()
+        
         isFetchInProgress = true
 
         DispatchQueue.global(qos: .background).async { [weak self] in
             guard let self = self else { return }
 
-            self.provider.request(.collection(involvedMaker: "Rembrandt van Rijn")) { result in
+            self.provider.request(.collection(involvedMaker: "Rembrandt van Rijn", maxResults: 30)) { result in
                 DispatchQueue.main.async {
-                    self.collection = self.decodeResult(result)
+                    self.collection = decodeResult(result)
                     print(self.collection.count)
                     self.isFetchInProgress = false
                 }
             }
         }
-    }
-
-    // MARK: - Private
-
-    private func decodeResult(_ result: Result<Response, MoyaError>) -> [Collection] {
-        switch result {
-            case let .success(response):
-                if response.statusCode == 200,
-                   let object: ArtObjects = ModelConverter.convertToModel(from: response.data) {
-                    return object.artObjects
-                } else {
-                    return []
-                }
-            case .failure:
-                return []
-        }
-    }
-}
-
-struct ModelConverter {
-    static func convertToModel<T: Equatable & Codable>(from data: Data) -> T? {
-        let decoder = JSONDecoder()
-        return try? decoder.decode(T.self, from: data)
-    }
-
-    static func convertToData<T: Equatable & Codable>(_ model: T) -> Data? {
-        let encoder = JSONEncoder()
-        return try? encoder.encode(model)
-    }
-
-    static func convertToModels<T: Equatable & Codable>(from data: Data) -> [T]? {
-        let decoder = JSONDecoder()
-        return try? decoder.decode([T].self, from: data)
-    }
-
-    static func convertToData<T: Equatable & Codable>(_ list: [T]) -> Data? {
-        let encoder = JSONEncoder()
-        return try? encoder.encode(list)
     }
 }

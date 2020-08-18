@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Moya
 
 struct ArtObjects: Codable {
     var artObjects: [Collection]
@@ -25,5 +26,19 @@ struct Collection: Codable, Identifiable {
 extension Collection: Equatable {
     static func == (lhs: Collection, rhs: Collection) -> Bool {
         return lhs.id == rhs.id
+    }
+}
+
+func decodeResult(_ result: Result<Response, MoyaError>) -> [Collection] {
+    switch result {
+        case let .success(response):
+            if response.statusCode == 200,
+               let object: ArtObjects = ModelConverter.convertToModel(from: response.data) {
+                return object.artObjects
+            } else {
+                return []
+            }
+        case .failure:
+            return []
     }
 }

@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum RijkStudioService {
-    case collection(involvedMaker: String)
+    case collection(involvedMaker: String, maxResults: Int)
 }
 
 extension RijkStudioService: TargetType {
@@ -38,10 +38,11 @@ extension RijkStudioService: TargetType {
 
     var task: Task {
         switch self {
-            case let .collection(involvedMaker):
+            case let .collection(involvedMaker, maxResults):
                 let key: String = (try? Preferences.getKey()) ?? ""
                 return .requestParameters(parameters: ["key": key,
-                                                       "involvedMaker": involvedMaker],
+                                                       "involvedMaker": involvedMaker,
+                                                       "ps": maxResults],
                                           encoding: URLEncoding.queryString)
         }
     }
