@@ -20,6 +20,7 @@
 		4C06DBB124EB2205008F534D /* ModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06DBAF24EB2204008F534D /* ModelConverter.swift */; };
 		4C06DBB224EB2280008F534D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD846A24EAE05100B867B6 /* Collection.swift */; };
 		4C06DBB424EB230D008F534D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4C06DBB324EB230D008F534D /* Moya */; };
+		4C09933E24ED0646006D4791 /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C06DB9224EB1907008F534D /* Preferences.plist */; };
 		4CDD843A24EADA6600B867B6 /* Rijk_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD843924EADA6600B867B6 /* Rijk_SwiftUIApp.swift */; };
 		4CDD843C24EADA6600B867B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD843B24EADA6600B867B6 /* ContentView.swift */; };
 		4CDD843E24EADA6900B867B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD843D24EADA6900B867B6 /* Assets.xcassets */; };
@@ -374,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C06DBA424EB1FF3008F534D /* Assets.xcassets in Resources */,
+				4C09933E24ED0646006D4791 /* Preferences.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

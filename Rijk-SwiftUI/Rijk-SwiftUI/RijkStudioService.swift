@@ -15,7 +15,7 @@ enum RijkStudioService {
 
 extension RijkStudioService: TargetType {
     var baseURL: URL {
-        URL(string: "https://www.rijksmuseum.nl/api/nl")!
+        URL(string: "https://www.rijksmuseum.nl/api/en")!
     }
 
     var path: String {

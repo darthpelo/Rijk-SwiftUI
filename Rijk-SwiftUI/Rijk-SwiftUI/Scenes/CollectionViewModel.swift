@@ -25,8 +25,6 @@ final class CollectionViewModel: ObservableObject, CollectionViewModelInterface 
     }
 
     func data() {
-        WidgetCenter.shared.reloadAllTimelines()
-        
         isFetchInProgress = true
 
         DispatchQueue.global(qos: .background).async { [weak self] in
@@ -34,6 +32,7 @@ final class CollectionViewModel: ObservableObject, CollectionViewModelInterface 
 
             self.provider.request(.collection(involvedMaker: "Rembrandt van Rijn", maxResults: 30)) { result in
                 DispatchQueue.main.async {
+                    WidgetCenter.shared.reloadTimelines(ofKind: "RijkWidget")
                     self.collection = decodeResult(result)
                     print(self.collection.count)
                     self.isFetchInProgress = false
