@@ -23,7 +23,7 @@ struct CollectionView: View {
                     })
                     .padding()
                 }
-                    List(viewModel.collection ?? []) { obcj in
+                List(viewModel.collection ) { obcj in
                         HStack {
                             Text("\(obcj.title)")
                         }

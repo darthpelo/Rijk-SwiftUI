@@ -20,16 +20,19 @@ struct Provider: TimelineProvider {
     }
 
     func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
-        let currentDate = Date()
-        let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
 
         DataFetcher.shared.getCollections { response in
 
-            let date = Date()
+            let currentDate = Date()
+            let refreshDate = Calendar.current.date(byAdding: .minute, value: 5, to: currentDate)!
+
             let calendar = Calendar.current
 
+            
             let entries = response?.enumerated().map { offset, currentCollection in
-                CollectionEntry(date: calendar.date(byAdding: .second, value: offset*10, to: date)!, title: currentCollection.title ?? "...")
+                CollectionEntry(date: calendar.date(byAdding: .second, value: offset*10,
+                                                    to: currentDate)!,
+                                title: currentCollection.title)
             }
 
             let timeLine = Timeline(entries: entries ?? [], policy: .after(refreshDate))
@@ -47,6 +50,7 @@ struct CollectionEntry: TimelineEntry {
 
 struct RijkWidgetEntryView : View {
     var entry: Provider.Entry
+    @Environment(\.widgetFamily) private var widgetFamily
 
     var body: some View {
         ZStack {
@@ -54,13 +58,16 @@ struct RijkWidgetEntryView : View {
                 .fill(Color(.black))
             VStack {
                 Text(entry.title)
-                    .multilineTextAlignment(.center)
+                    .multilineTextAlignment(.leading)
                     .lineLimit(3)
                     .foregroundColor(.white)
-                    .font(.title2)
-                    .padding()
+                    .font(.body)
+                if widgetFamily == .systemLarge {
+                    Image("nightw")
+                        .resizable()
+                }
                 UpdateView(date: entry.date)
-            }
+            }.padding()
         }
     }
 }
@@ -74,10 +81,12 @@ struct UpdateView: View {
             HStack {
                 Text("Last update: ")
                     .font(.footnote)
+                    .foregroundColor(.gray)
                 Text(date, style: .time)
                     .font(.footnote)
+                    .foregroundColor(.gray)
             }
-        }.padding(15)
+        }.padding(35)
     }
 }
 
@@ -92,42 +101,22 @@ struct RijkWidget: Widget {
         }
         .configurationDisplayName("Rijk Widget")
         .description("This is an example widget.")
-        .supportedFamilies([.systemMedium])
+        .supportedFamilies([.systemMedium, .systemLarge])
         .onBackgroundURLSessionEvents {
-                (sessionIdentifier, competion) in
+            (sessionIdentifier, competion) in
             competion()
-            }
+        }
     }
 }
 
 struct RijkWidget_Previews: PreviewProvider {
     static var previews: some View {
-        RijkWidgetEntryView(entry: CollectionEntry(date: Date(), title: "Self-Portrait"))
-            .previewContext(WidgetPreviewContext(family: .systemMedium))
-    }
-}
+        Group {
+            RijkWidgetEntryView(entry: CollectionEntry(date: Date(), title: "Self-Portrait, asihds sladjoaisjd lsadjoiajd pippeorolkndslkfnslkdfn asdklhaosdn"))
+                .previewContext(WidgetPreviewContext(family: .systemMedium))
 
-public class DataFetcher : ObservableObject {
-
-    var cancellable : Set<AnyCancellable> = Set()
-
-    static let shared = DataFetcher()
-
-    func getCollections(completion: @escaping ([Collection]?) -> Void){
-        let key: String = (try? Preferences.getKey()) ?? ""
-        let url = "https://www.rijksmuseum.nl/api/en/collection?key=\(key)&involvedMaker=Rembrandt+van+Rijn&ps=30"
-        let urlComponents = URLComponents(string: url)!
-
-        URLSession.shared.dataTaskPublisher(for: urlComponents.url!)
-            .map{$0.data}
-            .decode(type: ArtObjects.self, decoder: JSONDecoder())
-            .eraseToAnyPublisher()
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
-
-        }) { response in
-            completion(response.artObjects)
+            RijkWidgetEntryView(entry: CollectionEntry(date: Date(), title: "Self-Portrait, asihds sladjoaisjd lsadjoiajd pippeorolkndslkfnslkdfn asdklhaosdn"))
+                .previewContext(WidgetPreviewContext(family: .systemLarge))
         }
-        .store(in: &cancellable)
     }
 }

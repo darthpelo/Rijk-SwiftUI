@@ -20,12 +20,13 @@ extension ArtObjects: Equatable {
 
 struct Collection: Codable, Identifiable {
     var id: String
+    var objectNumber: String
     var title: String
 }
 
 extension Collection: Equatable {
     static func == (lhs: Collection, rhs: Collection) -> Bool {
-        return lhs.id == rhs.id
+        return lhs.id == rhs.id && lhs.objectNumber == rhs.objectNumber
     }
 }
 
