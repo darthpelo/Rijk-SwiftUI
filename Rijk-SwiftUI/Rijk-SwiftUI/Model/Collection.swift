@@ -22,12 +22,17 @@ struct Collection: Codable, Identifiable {
     var id: String
     var objectNumber: String
     var title: String
+    var webImage: WebImage
 }
 
 extension Collection: Equatable {
     static func == (lhs: Collection, rhs: Collection) -> Bool {
         return lhs.id == rhs.id && lhs.objectNumber == rhs.objectNumber
     }
+}
+
+struct WebImage: Codable {
+    var url: String
 }
 
 func decodeResult(_ result: Result<Response, MoyaError>) -> [Collection] {

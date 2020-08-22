@@ -65,6 +65,7 @@ struct RijkWidgetEntryView : View {
                 if widgetFamily == .systemLarge {
                     Image("nightw")
                         .resizable()
+                        .aspectRatio(contentMode: .fit)
                 }
                 UpdateView(date: entry.date)
             }.padding()
@@ -102,10 +103,10 @@ struct RijkWidget: Widget {
         .configurationDisplayName("Rijk Widget")
         .description("This is an example widget.")
         .supportedFamilies([.systemMedium, .systemLarge])
-        .onBackgroundURLSessionEvents {
-            (sessionIdentifier, competion) in
-            competion()
-        }
+//        .onBackgroundURLSessionEvents {
+//            (sessionIdentifier, competion) in
+//            competion()
+//        }
     }
 }
 

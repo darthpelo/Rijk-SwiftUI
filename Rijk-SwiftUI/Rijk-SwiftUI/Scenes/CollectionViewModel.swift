@@ -34,7 +34,6 @@ final class CollectionViewModel: ObservableObject, CollectionViewModelInterface 
                 DispatchQueue.main.async {
                     WidgetCenter.shared.reloadTimelines(ofKind: "RijkWidget")
                     self.collection = decodeResult(result)
-                    print(self.collection.count)
                     self.isFetchInProgress = false
                 }
             }
