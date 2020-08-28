@@ -30,24 +30,11 @@ final class DataFetcher : ObservableObject {
         }
         .store(in: &cancellable)
     }
-
-    func getImage(from url: String, completion: @escaping (Data) -> Void) {
-        let urlComponents = URLComponents(string: url)!
-
-        URLSession.shared.dataTaskPublisher(for: urlComponents.url!)
-            .map{$0.data}
-            .eraseToAnyPublisher()
-            .receive(on: DispatchQueue.main)
-            .sink(receiveCompletion: { completion in
-            }) { response in
-                completion(response)
-            }
-            .store(in: &cancellable)
-    }
 }
 
 final class ImageLoader: ObservableObject {
     var didChange = PassthroughSubject<Data, Never>()
+    private var cancellable : Set<AnyCancellable> = Set()
 
     var data = Data() {
         didSet {
@@ -55,15 +42,17 @@ final class ImageLoader: ObservableObject {
         }
     }
 
-    init(urlString:String) {
-        guard let url = URL(string: urlString) else { return }
+    init(urlString: String) {
+        let urlComponents = URLComponents(string: urlString)!
 
-        let task = URLSession.shared.dataTask(with: url) { data, _, _ in
-            guard let data = data else { return }
-            DispatchQueue.main.async {
-                self.data = data
+        URLSession.shared.dataTaskPublisher(for: urlComponents.url!)
+            .map{$0.data}
+            .eraseToAnyPublisher()
+            .receive(on: DispatchQueue.main)
+            .sink(receiveCompletion: { completion in
+            }) { response in
+                self.data = response
             }
-        }
-        task.resume()
+            .store(in: &cancellable)
     }
 }

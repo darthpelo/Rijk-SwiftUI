@@ -20,8 +20,10 @@
 		4C06DBB124EB2205008F534D /* ModelConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C06DBAF24EB2204008F534D /* ModelConverter.swift */; };
 		4C06DBB224EB2280008F534D /* Collection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD846A24EAE05100B867B6 /* Collection.swift */; };
 		4C06DBB424EB230D008F534D /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 4C06DBB324EB230D008F534D /* Moya */; };
-		4C09933E24ED0646006D4791 /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C06DB9224EB1907008F534D /* Preferences.plist */; };
 		4C8DE18C24EDCCE100B3D9B0 /* DataFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CF1F53824ED586600BB321C /* DataFetcher.swift */; };
+		4C9ACC1E24F153AC00603519 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9ACC1D24F153AC00603519 /* ImageView.swift */; };
+		4C9ACC1F24F153AC00603519 /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9ACC1D24F153AC00603519 /* ImageView.swift */; };
+		4C9ACC2024F153D800603519 /* Preferences.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C06DB9224EB1907008F534D /* Preferences.plist */; };
 		4CDD843A24EADA6600B867B6 /* Rijk_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD843924EADA6600B867B6 /* Rijk_SwiftUIApp.swift */; };
 		4CDD843C24EADA6600B867B6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CDD843B24EADA6600B867B6 /* ContentView.swift */; };
 		4CDD843E24EADA6900B867B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CDD843D24EADA6900B867B6 /* Assets.xcassets */; };
@@ -84,6 +86,7 @@
 		4C06DBA324EB1FF3008F534D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C06DBA524EB1FF3008F534D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4C06DBAF24EB2204008F534D /* ModelConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConverter.swift; sourceTree = "<group>"; };
+		4C9ACC1D24F153AC00603519 /* ImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageView.swift; sourceTree = "<group>"; };
 		4CDD843624EADA6600B867B6 /* Rijk-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rijk-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CDD843924EADA6600B867B6 /* Rijk_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rijk_SwiftUIApp.swift; sourceTree = "<group>"; };
 		4CDD843B24EADA6600B867B6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,6 +162,17 @@
 			path = RijkWidget;
 			sourceTree = "<group>";
 		};
+		4C9ACC2124F153E300603519 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				4C06DB9224EB1907008F534D /* Preferences.plist */,
+				4C06DB9424EB1960008F534D /* Preferences.swift */,
+				4CDD846F24EAE41000B867B6 /* RijkStudioService.swift */,
+				4C9ACC1D24F153AC00603519 /* ImageView.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		4CDD842D24EADA6600B867B6 = {
 			isa = PBXGroup;
 			children = (
@@ -186,11 +200,9 @@
 			isa = PBXGroup;
 			children = (
 				4CDD844224EADA6900B867B6 /* Info.plist */,
-				4C06DB9224EB1907008F534D /* Preferences.plist */,
+				4C9ACC2124F153E300603519 /* Shared */,
 				4CDD843B24EADA6600B867B6 /* ContentView.swift */,
-				4C06DB9424EB1960008F534D /* Preferences.swift */,
 				4CDD843924EADA6600B867B6 /* Rijk_SwiftUIApp.swift */,
-				4CDD846F24EAE41000B867B6 /* RijkStudioService.swift */,
 				4CDD843D24EADA6900B867B6 /* Assets.xcassets */,
 				4CDD846924EAE04200B867B6 /* Model */,
 				4CDD843F24EADA6900B867B6 /* Preview Content */,
@@ -379,7 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C06DBA424EB1FF3008F534D /* Assets.xcassets in Resources */,
-				4C09933E24ED0646006D4791 /* Preferences.plist in Resources */,
+				4C9ACC2024F153D800603519 /* Preferences.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +431,7 @@
 				4C06DBA224EB1FF1008F534D /* RijkWidget.swift in Sources */,
 				4CF1F53924ED586600BB321C /* DataFetcher.swift in Sources */,
 				4C06DBAD24EB2155008F534D /* RijkStudioService.swift in Sources */,
+				4C9ACC1F24F153AC00603519 /* ImageView.swift in Sources */,
 				4C06DBAE24EB2165008F534D /* Preferences.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -427,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C9ACC1E24F153AC00603519 /* ImageView.swift in Sources */,
 				4C06DBB024EB2205008F534D /* ModelConverter.swift in Sources */,
 				4C06DB9524EB1960008F534D /* Preferences.swift in Sources */,
 				4CDD846524EADC8100B867B6 /* CollectionViewModel.swift in Sources */,
