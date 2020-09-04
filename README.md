@@ -2,6 +2,8 @@
 
 Playground project created to learn and share how URLSession works with iOS 14 new widget.
 
+Some highlevel information inside the iOS14.pdf file.
+
 ## How to Run
 
 If you try to build the project after the checkout, you will have a compiler error due a missing file into *Shared* folder.
